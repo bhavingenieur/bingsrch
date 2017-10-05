@@ -54,4 +54,6 @@ color:#b2b09b;
   opacity: 1;
   right: 0;
 }
-button:focus {outline:0;}
+input {
+ outline:none;
+}
