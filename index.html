@@ -1,0 +1,32 @@
+<html ng-app="Myapp">
+<head>
+<title>My page</title>
+<script type="text/javascript" src="C:/Users/bhava/Downloads/angular-1.6.6/angular-1.6.6/angular.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="myscript.css"/>
+<script type="text/javascript" src="myscript.js"></script>
+</head>
+<body ng-controller="myctrl">
+<div align="center" class = "myclass">
+<h2>Sample Search using Bing Cognitive Services API</h2>
+<div class="s1">
+<input type="text" name="query" ng-model="myquery" />
+<button type="submit"  ng-click="zorm()" class="button"><span>Search</span></button></div>
+</div>
+<br/>
+<table class="table-hover table-bordered" ng-show="new_var">
+<thead>
+<tr>
+<th>ID</th><th>Name</th><th>Url</th><th>Snippet</th></tr>
+</thead>
+<tbody>
+<tr  ng-repeat="resp in res_resp">
+	<td>#{{$index + 1}}</td>
+	<td>{{resp.name}}</td>
+	<td><a ng-href="http://{{resp.displayUrl}}">{{resp.displayUrl}}</a></td>
+	<td>{{resp.snippet}}</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
