@@ -10,12 +10,12 @@ var myctrl = function($scope,$http){
 		var myq = $scope.myquery;
 		myq=encodeURIComponent(myq.trim());$scope.myq=myq;
 		var urltogo = 'https://api.cognitive.microsoft.com/bing/v7.0/search?q='+myq+'&responseFilter=Webpages&count=20&offset=0&mkt=en-in';
-    
+    $scope.loading = true;
 		$http.get(urltogo, config)
 		.then(function(response){
 			$scope.res_resp=response.data.webPages.value;
 			$scope.new_var=true;
-      
+      $scope.loading = false;
 			})
 		
 };
