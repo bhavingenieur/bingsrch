@@ -17,6 +17,10 @@
       <input type="text" placeholder="Enter your query..." name="query" ng-model="myquery"/>
       <button class="btn btn-lg" type="submit" ng-click="getresults()">Search</button><br/><br/>
     </div>
+    <div class="spinner" ng-show="loading">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+    </div>
     <div class="result container">
       <ul class="list-group" ng-repeat="res in res_resp " ng-if="new_var">
         <li class="list-group-item list-group-item-success">{{res.name}}</li>
