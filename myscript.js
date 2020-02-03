@@ -5,7 +5,7 @@ var myctrl = function($scope,$http){
   
   $scope.getresults=function(){
 		var config = {headers: {
-             'Ocp-Apim-Subscription-Key': 'ad5ee2fee96a4594ab5a899b73701bfc'
+             'Ocp-Apim-Subscription-Key': 'aabcd1234'
         }};
 		var myq = $scope.myquery;
 		myq=encodeURIComponent(myq.trim());$scope.myq=myq;
